@@ -77,3 +77,6 @@ for img in images:
         <p>{img['caption']}</p>
     </div>
     """
+
+    document.getElementById("gallery").innerHTML = output
+    
