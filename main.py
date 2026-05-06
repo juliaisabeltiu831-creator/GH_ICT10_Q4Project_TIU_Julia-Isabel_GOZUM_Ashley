@@ -55,7 +55,10 @@ def show_list(e):
     for c in classmates:
         output += c.introduce() + "<br>"
 
-    document.getElementById("output").innerHTML = output
+output = document.getElementById("output")
+
+if output:
+    output.innerHTML = "Classmate added successfully!"
 
 
 window.add_classmate = add_classmate
@@ -78,4 +81,7 @@ for img in images:
     </div>
     """
 
-document.getElementById("gallery").innerHTML = html
+gallery = document.getElementById("gallery")
+
+if gallery:
+    gallery.innerHTML = html
