@@ -79,3 +79,4 @@ for img in images:
     """
 
 document.getElementById("gallery").innerHTML = html
+
