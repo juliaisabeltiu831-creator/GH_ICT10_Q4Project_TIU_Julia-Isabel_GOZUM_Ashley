@@ -78,5 +78,5 @@ for img in images:
     </div>
     """
 
-document.getElementById("gallery").innerHTML = html
+    document.getElementById("gallery").innerHTML = html
 
