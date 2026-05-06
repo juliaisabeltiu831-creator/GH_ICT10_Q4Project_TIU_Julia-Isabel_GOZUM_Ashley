@@ -78,5 +78,4 @@ for img in images:
     </div>
     """
 
-    document.getElementById("gallery").innerHTML = output
-    
+document.getElementById("gallery").innerHTML = html
