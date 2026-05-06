@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classmates Dashboard</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1000px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .navbar a:hover {
+            opacity: 1;
+        }
+
+        .card {
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .inputs {
+            display: grid;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        input:focus {
+            outline: 2px solid #38bdf8;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        #output {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.08);
+            min-height: 120px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 16px;
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div><strong>4Q Project Collaboration</strong></div>
+        <div>
+            <a href="index.html">Classmate List</a>
+            <a href="project.html">Class Photos</a>
+            <a href="skills test.html">Attendance</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Grade 10 Emerald Classmates</h2>
+
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="section" placeholder="Section">
+            <input type="text" id="subject" placeholder="Favorite Subject">
+        </div>
+
+        <div class="buttons">
+            <button py-click="add_classmate">Add</button>
+            <button py-click="show_list">Show List</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <div class="footer">
+        By Julia Tiu & Ashley Gozum | 10-Emerald
+    </div>
+
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
