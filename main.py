@@ -60,3 +60,22 @@ def show_list(e):
 
 window.add_classmate = add_classmate
 window.show_list = show_list
+
+images = [
+    {"src": "first.png", "caption": "First Day of School"},
+    {"src": "intrams.png", "caption": "Intramurals"},
+    {"src": "xmas.png", "caption": "Group Photo"},
+    {"src": "food.png", "caption": "School Event"},
+]
+
+html = ""
+
+for img in images:
+    html += f"""
+    <div class="card">
+        <img src="{img['src']}">
+        <p>{img['caption']}</p>
+    </div>
+    """
+
+document.getElementById("gallery").innerHTML = html
