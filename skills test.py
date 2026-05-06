@@ -29,7 +29,6 @@ def update_absences(event):
     day = document.getElementById('day-select').value
     value = document.getElementById('absence-input').value
 
-    # Prevent crash if empty
     if value == "":
         return
 
@@ -46,5 +45,4 @@ def handle_click(event):
     update_absences(event)
 
 
-# Initial graph
 display_graph()
