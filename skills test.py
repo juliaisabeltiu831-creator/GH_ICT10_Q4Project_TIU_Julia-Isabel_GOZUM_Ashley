@@ -2,12 +2,10 @@ from pyscript import document, display, when
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Data
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 absences = np.array([0, 0, 0, 0, 0])
 
 def display_graph():
-    # Clear previous graph
     document.getElementById("graph").innerHTML = ""
 
     fig, ax = plt.subplots(figsize=(9, 5))
