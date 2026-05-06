@@ -46,8 +46,10 @@ def add_classmate(e):
 
     classmates.append(Classmate(name, section, subject))
 
-    document.getElementById("output").innerHTML = "Classmate added successfully!"
+    output = document.getElementById("output")
 
+    if output:
+        output.innerHTML = "Classmate added successfully!"
 
 def show_list(e):
     output = ""
@@ -55,10 +57,10 @@ def show_list(e):
     for c in classmates:
         output += c.introduce() + "<br>"
 
-output = document.getElementById("output")
+    output_div = document.getElementById("output")
 
-if output:
-    output.innerHTML = "Classmate added successfully!"
+    if output_div:
+        output_div.innerHTML = output
 
 
 window.add_classmate = add_classmate
