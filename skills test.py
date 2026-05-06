@@ -24,9 +24,6 @@ def display_graph():
 
     display(fig, target="graph")
 
-    document.getElementById("total").innerText = int(np.sum(absences))
-    document.getElementById("average").innerText = round(np.mean(absences), 1)
-
 
 def update_absences(event):
     day = document.getElementById('day-select').value
@@ -44,7 +41,6 @@ def update_absences(event):
     display_graph()
 
 
-# Proper event binding (THIS FIXES BUTTON)
 @when("click", "#update-btn")
 def handle_click(event):
     update_absences(event)
