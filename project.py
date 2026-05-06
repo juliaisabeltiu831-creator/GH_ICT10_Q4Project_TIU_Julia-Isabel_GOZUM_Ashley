@@ -2,10 +2,10 @@ from pyscript import document
 
 # IMAGE DATA (easy to edit)
 images = [
-    {"src": "first.jpg", "caption": "First Day of School"},
-    {"src": "intrams.jpg", "caption": "Intramurals"},
-    {"src": "xmas.jpg", "caption": "Group Photo"},
-    {"src": "food.jpg", "caption": "School Event"},
+    {"src": "first.png", "caption": "First Day of School"},
+    {"src": "intrams.png", "caption": "Intramurals"},
+    {"src": "xmas.png", "caption": "Group Photo"},
+    {"src": "food.png", "caption": "School Event"},
 ]
 
 html = ""
