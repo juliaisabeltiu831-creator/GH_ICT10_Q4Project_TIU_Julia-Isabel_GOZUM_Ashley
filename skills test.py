@@ -1,8 +1,7 @@
-from pyscript import document, display, when
+from pyscript import display
 import numpy as np
-import os
-
-os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
+import logging
+logging.getLogger('matplotlib').setLevel(logging.ERROR)
 
 import matplotlib.pyplot as plt
 
